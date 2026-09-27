@@ -291,7 +291,7 @@ st.markdown(
 | **Erzeugte Netze** | Gleichverteilte oder geclusterte Knoten und die Straße, keine Fremddaten. |
 """
 )
-st.caption("Die Standortplanungs-Linie ist als Ganzes geplant: das Standortproblem ohne Kapazität als Wurzel, danach die kapazitierte Standortplanung, p-Center, Standort mit Bestand, dieses Stück (Wettbewerb) und Hub-Standorte.")
+st.caption("Die Standortplanungs-Linie ist damit vollständig: das Standortproblem ohne Kapazität als Wurzel, kapazitierte Standortplanung, p-Center, Standort mit Bestand, dieses Stück (Wettbewerb) und Hub-Standorte.")
 
 st.markdown("---")
 

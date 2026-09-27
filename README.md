@@ -13,7 +13,7 @@ standortplanung-demo (UFL, Wurzel: Fixkosten + Transport)                       
   ├─ p-center-demo (Maximum statt Summe: Farthest-first, exakt per Überdeckung)          [gebaut]
   ├─ standort-bestand-demo (Bestandskosten je Lager, Risk Pooling)                       [gebaut]
   ├─ wettbewerbsstandort-demo (Führer und Folger, (r|p)-Centroid)                        [dieses Stück]
-  └─ p-Hub-Median                                                                        [geplant]
+  └─ p-hub-median-demo (Hub-Standorte mit Rabatt, Single Allocation)                     [gebaut]
 ```
 
 ## Modell
