@@ -1,5 +1,7 @@
 # Standortwettbewerb – wer vorwegnimmt, gewinnt – Streamlit-Demo
 
+**[→ Demo live ausprobieren](https://sebastianhanisch-wettbewerbsstandort-demo.streamlit.app/)**
+
 Fünftes Stück der **Standortplanungs-Linie** der "Konzepte"-Reihe für die Website "Sebastian Hanisch – Operations Research und Machine Learning", Kind von [standortplanung-demo](https://github.com/sebastian-hanisch/standortplanung-demo) (Standortproblem ohne Kapazität):
 anders als die Fall-Demos im Portfolio (ein Anwendungsfall, mehrere Verfahren im Vergleich) zeigt diese Demo **ein** Modell – **Standortwettbewerb zwischen einem Führer und einem Folger** ((r|p)-Centroid, Stackelberg) – an einem wachsenden Beispiel.
 Bisher wählte ein Planer Standorte allein. Hier zieht ein **Führer** zuerst ($p$ Standorte), danach antwortet ein **Folger** ($r$ Standorte): jeder Kunde geht zum näheren Standort, bei Gleichstand teilen sie die Nachfrage. Wer zuerst zieht, muss die Antwort **vorwegnehmen** – wer nur „gute“ Standorte wählt (kleinste Wegesumme, p-Median), verschenkt Nachfrage.
