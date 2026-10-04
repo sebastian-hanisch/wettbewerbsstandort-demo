@@ -65,7 +65,7 @@ st.markdown(
     """
 Bisher wählte ein Planer Standorte allein. Jetzt **zieht ein Führer zuerst** ($p$ Standorte), und ein **Folger antwortet** ($r$ Standorte): jeder Kunde geht zum **näheren** Standort, bei Gleichstand teilen sich beide seine Nachfrage.
 Wer zuerst zieht, muss die **Antwort vorwegnehmen** – wer nur „gute“ Standorte wählt (die Summe der Wege minimieren), verschenkt Nachfrage. Die Demo zeigt, **wie viel** das Vorwegnehmen bringt, wie die Verfahren dafür abschneiden
-und warum es ohne Reihenfolge **meist kein Gleichgewicht** gibt.
+und warum es ohne Reihenfolge bei mehreren Standorten je Seite **meist kein Gleichgewicht** gibt.
 """
 )
 st.caption(
@@ -316,6 +316,6 @@ st.markdown("---")
 
 st.caption(
     "Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – "
-    "Operations Research und Machine Learning. Interesse an einer maßgeschneiderten Lösung für "
-    "Ihr Unternehmen? [Kontakt aufnehmen](https://sebastianhanisch.net/kontakt.html)"
+    "Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). "
+    "Mehr zur Reihe: [Standortplanung: von der Wahl zum Wettbewerb](https://sebastianhanisch.net/konzepte-standortplanung.html)."
 )

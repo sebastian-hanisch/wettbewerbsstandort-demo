@@ -28,7 +28,7 @@ Jede hier genannte Zahl ist in `tests/test_claims.py` belegt: Beispielnetze übe
 
 **Über 40 Netze** ($p=r=2$): p-Median-Führer im Mittel **46,1 %** (28,6–63,6), optimaler Führer **51,4 %** (45,3–63,6) – Vorwegnehmen bringt **5,3 Prozentpunkte**. Zufällige Führer 26,7 %, die schlechtesten 6,2 %. Der p-Median-Führer ist nur in **14 von 40** Netzen zugleich optimal. Greedy erreicht 49,2 % (optimal in 21 von 40, schlechtester Rückstand 11,7 Punkte), Swap-Lokalsuche 50,9 % (optimal in 34, Rückstand bis 4,7). Bei $p=r=1$ ist der Gewinn durch Vorwegnehmen klein (1,7 Punkte, p-Median in 31/40 optimal); bei $p=r=3$ groß (5,7 Punkte, nur 10/40).
 
-**Reine Gleichgewichte sind selten.** Bei $p=r=1/2/3$ existieren sie in **21 / 8 / 10 von 40** Netzen; abwechselnde Bestantworten ab der p-Median-Lösung kommen in 18 / 6 / 5 zur Ruhe und laufen in 22 / 34 / 34 im Kreis. Größere Netze haben noch seltener eines: bei $p=r=2$ (20 feste Netze) sinkt die Zahl der Netze mit einem Gleichgewicht von **16** (8 Knoten) über 8 (10 Knoten) und 2 (18 Knoten) auf **0** (22 Knoten).
+**Reine Gleichgewichte sind selten, sobald jede Seite mehrere Standorte hat** (bei einem Standort je Seite haben gut die Hälfte der Netze eines). Bei $p=r=1/2/3$ existieren sie in **21 / 8 / 10 von 40** Netzen; abwechselnde Bestantworten ab der p-Median-Lösung kommen in 18 / 6 / 5 zur Ruhe und laufen in 22 / 34 / 34 im Kreis. Größere Netze haben noch seltener eines: bei $p=r=2$ (20 feste Netze) sinkt die Zahl der Netze mit einem Gleichgewicht von **16** (8 Knoten) über 8 (10 Knoten) und 2 (18 Knoten) auf **0** (22 Knoten).
 
 **Asymmetrie: wer mehr Standorte hat, gewinnt.** Bei $p=2,r=1$ behält der optimale Führer im Mittel 72,4 % (in allen 40 Netzen mindestens die Hälfte); bei $p=1,r=2$ nur 23,5 % (in keinem Netz die Hälfte). Über alle Kombinationen (20 feste Netze, p-Median / optimal):
 
@@ -48,7 +48,7 @@ Vor dem Bau standen mehrere Vermutungen im Plan (Modellprüfung der Erweiterung 
 
 - **„Der Erste ist im Nachteil“ – widerlegt.** Der optimale Führer behält in 24 von 40 Netzen mehr als die Hälfte (bei $p=r=2$); bei $p>r$ sogar immer.
 - **„Der p-Median-Führer liegt ungefähr richtig“ – teilweise widerlegt.** Er ist nur in 14 von 40 Netzen ($p=r=2$) selbst optimal, verliert im Mittel 5,3 Punkte; bei $p=r=3$ sind es 5,7 Punkte.
-- **„Ohne Reihenfolge gibt es meist kein Gleichgewicht“ – bestätigt und verstärkt sich mit der Netzgröße.** Reine Gleichgewichte existieren nur in 8–21 von 40 Standardnetzen, und ihre Zahl sinkt mit wachsendem $n$ auf 0.
+- **„Ohne Reihenfolge gibt es meist kein Gleichgewicht“ – bestätigt ab zwei Standorten je Seite und verstärkt sich mit der Netzgröße.** Reine Gleichgewichte existieren bei $p=r=2$ und $3$ nur in 8 bzw. 10 von 40 Standardnetzen (bei $p=r=1$ in 21), und ihre Zahl sinkt mit wachsendem $n$ auf 0.
 - **„Eine naheliegende Heuristik (Greedy) genügt“ – widerlegt, besonders auf der Straße.** Greedy verfehlt dort bei $p=r=3$ das Optimum um 32 Punkte; die Swap-Lokalsuche danach behebt es vollständig in den gemessenen Fällen.
 - **„Die Gleichstandsregel ist entscheidend“ – widerlegt.** Ob der Führer Gleichstände ganz oder halb bekommt, ändert die Zahlen kaum.
 - **Bestätigt:** wer mehr Standorte hat als der Gegner, gewinnt deutlich mehr als die Hälfte; auf der Straße gewinnt (mit einem Standort je Seite) immer die Mitte, und es gibt dort stets ein Gleichgewicht.
@@ -72,3 +72,7 @@ Die abwechselnden Bestantworten sind eine Veranschaulichung, kein Verfahren, um 
 | `tests/` | 178 Tests: Szenario, Spiel und Führer-Verfahren gegen unabhängige reine Python-Implementierungen, Gleichgewichte, Presets, Zahlen (`test_claims.py`), App |
 
 Lokal starten: `pip install -r requirements.txt`, dann `streamlit run app.py`; Tests: `pip install -r requirements-dev.txt`, dann `python -m pytest tests`.
+
+---
+
+Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zur Reihe: [Standortplanung: von der Wahl zum Wettbewerb](https://sebastianhanisch.net/konzepte-standortplanung.html).
